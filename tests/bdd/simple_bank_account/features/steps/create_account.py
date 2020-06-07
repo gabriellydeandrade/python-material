@@ -1,10 +1,10 @@
-from behave import *
+from behave import when, then
 from simple_bank_account import SimpleBankAccount
 
 
 @when("a conta do cliente for criada")
 def create_account(context):
-    account = SimpleBankAccount(name="Shizuku Tsukishima", number=1, password=123456)
+    account = SimpleBankAccount(client_name="Shizuku Tsukishima", number=1, password=123456)
     context.result = account.balance
 
 

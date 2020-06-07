@@ -8,4 +8,4 @@ Funcionalidade: criar conta
 
   Cenário: cliente solicita criação de conta
     Quando a conta do cliente for criada
-    Entao o saldo de sua conta deve estar zerado
+    Então o saldo de sua conta deve estar zerado

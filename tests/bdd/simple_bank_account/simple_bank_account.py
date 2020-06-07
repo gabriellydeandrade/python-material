@@ -1,10 +1,15 @@
-class SimpleBankAccount:
-    def __init__(self, name: str, number: int, password: int):
-        self.client_name = name
+class Client:
+    def __init__(self, client_name: str):
+        self.name = client_name
+        self.is_authenticated = False
+
+
+class SimpleBankAccount(Client):
+    def __init__(self, client_name: str, number: int, password: int):
+        super().__init__(client_name=client_name)
         self.number = number
         self.password = password
         self.balance = 0
-        self.is_authenticated = False
 
     def authenticate(self, number: int, password: int):
         if number == self.number and password == self.password:
