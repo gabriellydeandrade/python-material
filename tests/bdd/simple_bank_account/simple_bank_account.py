@@ -19,4 +19,11 @@ class SimpleBankAccount(Client):
         if self.is_authenticated:
             self.balance += quantity
 
+    def withdraw(self, quantity: float):
+        if self.is_authenticated:
+            if quantity <= self.balance:
+                self.balance -= quantity
+            else:
+                return "Saldo não disponível"
+
 
