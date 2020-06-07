@@ -1,5 +1,6 @@
 class SimpleBankAccount:
-    def __init__(self, number: int, password: int):
+    def __init__(self, name: str, number: int, password: int):
+        self.client_name = name
         self.number = number
         self.password = password
         self.balance = 0
@@ -10,6 +11,7 @@ class SimpleBankAccount:
             self.is_authenticated = True
 
     def deposit(self, quantity: float):
-        self.balance += quantity
+        if self.is_authenticated:
+            self.balance += quantity
 
 
