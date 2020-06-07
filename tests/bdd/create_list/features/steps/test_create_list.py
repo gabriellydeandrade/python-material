@@ -1,6 +1,6 @@
 from behave import *
 
-from test.bdd.create_list.code.create_list import create_list
+from create_list import create_list
 
 
 @when("a new list is created")

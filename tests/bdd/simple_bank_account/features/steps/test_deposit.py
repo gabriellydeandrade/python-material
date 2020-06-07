@@ -1,5 +1,5 @@
 from behave import *
-from test.bdd.simple_bank_account.code.simple_bank_account import SimpleBankAccount
+from simple_bank_account import SimpleBankAccount
 
 
 @when("o cliente estiver autenticado")
